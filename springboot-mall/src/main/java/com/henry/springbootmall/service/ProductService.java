@@ -3,6 +3,8 @@ package com.henry.springbootmall.service;
 import com.henry.springbootmall.dto.ProductRequest;
 import com.henry.springbootmall.model.Product;
 
+import java.util.List;
+
 /**
  * ClassName: ProductService
  * Package: com.henry.springbootmall.service
@@ -14,6 +16,8 @@ import com.henry.springbootmall.model.Product;
  */
 public interface ProductService {
 
+    List<Product> getProducts();
+
     Product getProductById(Integer productId);
 
     Integer createProduct(ProductRequest productRequest);
@@ -21,4 +25,5 @@ public interface ProductService {
     void updateProduct(Integer productId, ProductRequest productRequest);
 
     void deleteProductById(Integer productId);
+
 }
