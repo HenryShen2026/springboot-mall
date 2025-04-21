@@ -1,5 +1,6 @@
 package com.henry.springbootmall.dao;
 
+import com.henry.springbootmall.model.Order;
 import com.henry.springbootmall.model.OrderItem;
 
 import java.util.List;
@@ -14,6 +15,10 @@ import java.util.List;
  * @Version 1.0
  */
 public interface OrderDao {
+
+    Order getOrderById(Integer orderId);
+
+    List<OrderItem> getOrderItemsByOrderId(Integer orderId);
 
     Integer createOrder(Integer userId, Integer totalAmount);
 

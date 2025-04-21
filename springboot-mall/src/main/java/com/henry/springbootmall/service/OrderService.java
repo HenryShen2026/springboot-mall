@@ -1,6 +1,7 @@
 package com.henry.springbootmall.service;
 
 import com.henry.springbootmall.dto.CreateOrderRequest;
+import com.henry.springbootmall.model.Order;
 
 /**
  * ClassName: OrderService
@@ -14,4 +15,6 @@ import com.henry.springbootmall.dto.CreateOrderRequest;
 public interface OrderService {
 
     Integer createOrder(Integer userId, CreateOrderRequest createOrderRequest);
+
+    Order getOrderById(Integer orderId);
 }
