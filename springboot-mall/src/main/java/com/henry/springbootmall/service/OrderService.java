@@ -1,7 +1,10 @@
 package com.henry.springbootmall.service;
 
 import com.henry.springbootmall.dto.CreateOrderRequest;
+import com.henry.springbootmall.dto.OrderQueryParams;
 import com.henry.springbootmall.model.Order;
+
+import java.util.List;
 
 /**
  * ClassName: OrderService
@@ -13,6 +16,10 @@ import com.henry.springbootmall.model.Order;
  * @Version 1.0
  */
 public interface OrderService {
+
+    Integer countOrder(OrderQueryParams orderQueryParams);
+
+    List<Order> getOrders(OrderQueryParams orderQueryParams);
 
     Integer createOrder(Integer userId, CreateOrderRequest createOrderRequest);
 
